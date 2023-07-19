@@ -1,0 +1,38 @@
+.staysGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stays {
+  max-width: 70%;
+}
+
+.staysTitle {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+#stayHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 1300px) {
+  .staysGrid {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 672px) {
+  .stays {
+    width: 90%;
+  }
+}
