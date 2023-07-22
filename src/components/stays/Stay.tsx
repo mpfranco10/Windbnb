@@ -1,6 +1,6 @@
 import { StayProps } from "../types/Stays.types";
 import "./Stay.css";
-import star from "../../assets/star.svg";
+import StarIcon from "@mui/icons-material/Star";
 
 export default function Stay(props: StayProps) {
   const { title, rating, photo, superHost, type, beds } = props;
@@ -14,8 +14,7 @@ export default function Stay(props: StayProps) {
           {beds && beds > 0 ? " - ".concat(beds.toString(), " beds") : ""}
         </p>
         <p className="stayRating">
-          {" "}
-          <img src={star} alt="Star" className="star" />
+          <StarIcon style={{ fontSize: "16px", fill: "#f05454" }}></StarIcon>
           {rating}
         </p>
       </div>

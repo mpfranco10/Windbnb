@@ -26,11 +26,6 @@
   color: #828282;
 }
 
-.star {
-  width: 14px;
-  margin: 0 5px 0 0;
-}
-
 .stayRating {
   font-size: 14px;
   font-weight: 500;
@@ -76,9 +71,6 @@
     font-size: 12px;
   }
 
-  .star {
-    width: 12px;
-  }
   .stayInfo {
     gap: 3px;
   }

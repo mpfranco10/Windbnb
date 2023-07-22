@@ -1,0 +1,28 @@
+.smallFilter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Mulish", sans-serif;
+  border: 1px solid #f2f2f2;
+  box-shadow: 0px 1px 6px 0px #0000001a;
+  height: 55px;
+  border-radius: 16px;
+}
+
+.filterItem {
+  display: flex;
+  padding: 0 15px 0 15px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.filterItem + .filterItem {
+  border-left: solid 1px #f2f2f2;
+}
+
+.grayFilterText {
+  color: #bdbdbd;
+}
