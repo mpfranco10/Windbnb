@@ -13,10 +13,11 @@
 
 .filterItem {
   display: flex;
+  flex-direction: column;
   padding: 0 15px 0 15px;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
+  text-align: left;
+  width: 100%;
+  min-width: fit-content;
 }
 
 .filterItem + .filterItem {
@@ -25,4 +26,11 @@
 
 .grayFilterText {
   color: #bdbdbd;
+}
+
+.filterLabel {
+  font-size: 9px;
+  font-weight: 800;
+  color: #333333;
+  margin: 0;
 }
