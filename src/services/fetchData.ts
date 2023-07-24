@@ -1,6 +1,8 @@
 import stays from "../assets/stays.json";
-import { StayProps } from "../components/types/Stays.types";
+import { StayProps } from "../types/Stays.types";
 
-export const loadStays = (): StayProps[] => {
-  return stays;
+export const loadStays = (): Promise<StayProps[]> | undefined => {
+  return new Promise<StayProps[]>((resolve) => {
+    setTimeout(() => resolve(stays), 2000);
+  });
 };

@@ -1,4 +1,4 @@
-import { StayProps } from "../types/Stays.types";
+import { StayProps } from "../../types/Stays.types";
 import "./Stay.css";
 import StarIcon from "@mui/icons-material/Star";
 

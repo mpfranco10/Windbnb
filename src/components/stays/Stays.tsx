@@ -1,14 +1,23 @@
 import React from "react";
-import { loadStays } from "../../services/fetchData";
-import { StayProps } from "./../types/Stays.types";
+import { useDispatch, useSelector } from "react-redux";
 import Stay from "./Stay";
 import "./Stays.css";
+import {
+  selectAllStays,
+  loadAllStays,
+  loadingStays,
+} from "../../features/stays/staysSlice";
+import { AppDispatch } from "../../app/store";
+import { StayProps } from "../../types/Stays.types";
 
 export default function Stays() {
-  const [stays, setStays] = React.useState<StayProps[]>([]);
+  const dispatch = useDispatch<AppDispatch>();
+  const stays = useSelector(selectAllStays);
+  const loading = useSelector(loadingStays);
+  console.log(stays);
 
   React.useEffect(() => {
-    setStays(loadStays());
+    dispatch(loadAllStays());
   }, []);
 
   return (
@@ -19,11 +28,19 @@ export default function Stays() {
       </div>
 
       <h2 className="staysAmount"></h2>
-      <div className="staysGrid">
-        {stays.map((stay) => (
-          <Stay key={stay.title} {...stay}></Stay>
-        ))}
-      </div>
+
+      {stays && stays.length > 0 && (
+        <div className="staysGrid">
+          {stays.map((stay: StayProps) => (
+            <Stay key={stay.title} {...stay}></Stay>
+          ))}
+        </div>
+      )}
+      {loading && (
+        <div>
+          <p>Loading</p>
+        </div>
+      )}
     </div>
   );
 }
