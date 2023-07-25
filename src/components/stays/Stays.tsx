@@ -14,7 +14,6 @@ export default function Stays() {
   const dispatch = useDispatch<AppDispatch>();
   const stays = useSelector(selectAllStays);
   const loading = useSelector(loadingStays);
-  console.log(stays);
 
   React.useEffect(() => {
     dispatch(loadAllStays());
@@ -37,9 +36,10 @@ export default function Stays() {
         </div>
       )}
       {loading && (
-        <div>
-          <p>Loading</p>
-        </div>
+         <div className="loaderContainer">
+          <div className="loader"></div>
+         </div>
+        
       )}
     </div>
   );
