@@ -36,10 +36,9 @@ export default function Stays() {
         </div>
       )}
       {loading && (
-         <div className="loaderContainer">
+        <div className="loaderContainer">
           <div className="loader"></div>
-         </div>
-        
+        </div>
       )}
     </div>
   );

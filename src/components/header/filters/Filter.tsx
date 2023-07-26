@@ -6,16 +6,16 @@ import FilterDetails from "./FilterDetails";
 export default function Filter() {
   const [showFilterDetails, setShowFilterDetails] = useState<boolean>(false);
 
-  const handleSmallFilterClick = () => {
-    setShowFilterDetails(true);
+  const handleFilterClick = () => {
+    setShowFilterDetails((previousState) => !previousState);
   };
 
   return (
     <>
       {!showFilterDetails ? (
-        <SmallFilter onClick={handleSmallFilterClick} />
+        <SmallFilter onClick={handleFilterClick} />
       ) : (
-        <FilterDetails />
+        <FilterDetails onClick={handleFilterClick} />
       )}
     </>
   );
