@@ -48,7 +48,7 @@ export default function SmallFilter({
           <>
             <button className="bigSearchButton">
               <SearchIcon style={{ fill: "white" }} />
-              Search
+              Search test
             </button>
             <CloseIcon onClick={onCloseClick} />
           </>
