@@ -11,6 +11,10 @@
   border-radius: 16px;
 }
 
+.smallFilter:hover {
+  background-color: #f0545424;
+}
+
 .filterItem {
   display: flex;
   flex-direction: column;
@@ -20,46 +24,10 @@
   min-width: fit-content;
 }
 
-.filterItemButton {
-  display: flex;
-  width: 100%;
-  min-width: fit-content;
-  align-items: center;
-  justify-content: center;
-}
-
 .filterItem + .filterItem {
-  border-left: solid 1px #f2f2f2;
-}
-
-.filterItem + .filterItemButton {
   border-left: solid 1px #f2f2f2;
 }
 
 .grayFilterText {
   color: #bdbdbd;
-}
-
-.filterLabel {
-  font-size: 9px;
-  font-weight: 800;
-  color: #333333;
-  margin: 0;
-}
-
-.fullHeight {
-  height: 100%;
-}
-
-.bigSearchButton {
-  font-family: "Mulish", sans-serif;
-  background-color: #f05454;
-  color: white;
-  border: 0px;
-  border-radius: 16px;
-  width: 127px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 90%;
 }
