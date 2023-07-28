@@ -25,9 +25,11 @@ export default function FilterDetails({
           </div>
           <div className="filterItemButton fullHeight">
             <button className="bigSearchButton">
-              <SearchIcon style={{ fill: "white" }} />
+              <SearchIcon />
               Search
             </button>
+          </div>
+          <div className="bigFilterItem closeButton">
             <div className="closeButton">
               <CloseIcon onClick={onToggleClick} />
             </div>

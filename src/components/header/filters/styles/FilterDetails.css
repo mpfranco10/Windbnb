@@ -65,6 +65,10 @@
   height: 90%;
 }
 
+.filterItemButton :hover {
+  background-color: #ac0f0f;
+}
+
 .filterItemButton {
   display: flex;
   width: 100%;
@@ -75,7 +79,7 @@
 }
 
 .closeButton {
-  width: 50px;
+  width: 30px;
 }
 
 .closeButton :hover {
