@@ -18,21 +18,35 @@ export default function FilterDetails({
           <div className="bigFilterItem">
             <p className="filterLabel">LOCATION</p>
             Helsinki, Finland
+            <div id="myDropdown" className="dropdown-content">
+              <p>Home</p>
+              <p>About</p>
+              <p>Contact</p>
+            </div>
           </div>
           <div className="bigFilterItem grayFilterText">
             <p className="filterLabel">GUESTS</p>
             Add guests
+            <div id="myDropdown" className="dropdown-content">
+              <p>Home</p>
+              <p>About</p>
+              <p>Contact</p>
+            </div>
           </div>
           <div className="filterItemButton fullHeight">
             <button className="bigSearchButton">
-              <SearchIcon />
+              <SearchIcon style={{ paddingRight: "5px" }} />
               Search
             </button>
           </div>
-          <div className="bigFilterItem closeButton">
-            <div className="closeButton">
-              <CloseIcon onClick={onToggleClick} />
-            </div>
+          <div className="filterItemButton fullHeight">
+            <button
+              className="bigSearchButton closeButton"
+              onClick={onToggleClick}
+            >
+              <CloseIcon style={{ paddingRight: "5px" }} />
+              Close
+            </button>
           </div>
         </div>
       </div>

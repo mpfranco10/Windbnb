@@ -1,14 +1,13 @@
 .filterDetails {
   position: absolute;
   background-color: white;
-  height: 40%;
+  height: 450px;
   top: 0;
   right: 0;
   left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .filterDetailsContent {
@@ -16,6 +15,7 @@
 }
 
 .bigFilter {
+  margin-top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,6 +41,14 @@
   border-left: solid 1px #f2f2f2;
 }
 
+.bigFilterItem + .filterItemButton {
+  border-left: solid 1px #f2f2f2;
+}
+
+.filterItemButton + .filterItemButton {
+  border-left: solid 1px #f2f2f2;
+}
+
 .filterLabel {
   font-size: 9px;
   font-weight: 800;
@@ -49,7 +57,7 @@
 }
 
 .fullHeight {
-  height: 100%;
+  height: 90%;
 }
 
 .bigSearchButton {
@@ -66,7 +74,7 @@
 }
 
 .filterItemButton :hover {
-  background-color: #ac0f0f;
+  background-color: #8f8f8f;
 }
 
 .filterItemButton {
@@ -74,14 +82,29 @@
   width: 100%;
   min-width: fit-content;
   align-items: center;
-  justify-content: right;
-  gap: 30px;
+  justify-content: center;
 }
 
 .closeButton {
-  width: 30px;
+  background-color: #4c4747;
 }
 
-.closeButton :hover {
-  color: #f05454;
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  min-width: 160px;
+  overflow: auto;
+  z-index: 1;
+  top: 170px;
+}
+
+.dropdown-content {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
