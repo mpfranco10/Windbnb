@@ -1,7 +1,7 @@
 .filterDetails {
   position: absolute;
   background-color: white;
-  height: 450px;
+  height: 460px;
   top: 0;
   right: 0;
   left: 0;
@@ -15,7 +15,7 @@
 }
 
 .bigFilter {
-  margin-top: 100px;
+  margin-top: 93px;
   display: flex;
   align-items: center;
   justify-content: center;
