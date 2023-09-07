@@ -1,23 +1,23 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import Stay from "./Stay";
-import "./Stays.css";
+import React from 'react'
+import {useDispatch, useSelector} from 'react-redux'
+import Stay from './Stay'
+import './Stays.css'
 import {
   selectAllStays,
   loadAllStays,
-  loadingStays,
-} from "../../features/stays/staysSlice";
-import { AppDispatch } from "../../app/store";
-import { StayProps } from "../../types/Stays.types";
+  loadingStays
+} from '../../features/stays/staysSlice'
+import {AppDispatch} from '../../app/store'
+import {StayProps} from '../../types/Stays.types'
 
 export default function Stays() {
-  const dispatch = useDispatch<AppDispatch>();
-  const stays = useSelector(selectAllStays);
-  const loading = useSelector(loadingStays);
+  const dispatch = useDispatch<AppDispatch>()
+  const stays = useSelector(selectAllStays)
+  const loading = useSelector(loadingStays)
 
   React.useEffect(() => {
-    dispatch(loadAllStays());
-  }, []);
+    dispatch(loadAllStays())
+  }, [])
 
   return (
     <div className="stays">
@@ -41,5 +41,5 @@ export default function Stays() {
         </div>
       )}
     </div>
-  );
+  )
 }

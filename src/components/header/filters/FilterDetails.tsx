@@ -1,15 +1,15 @@
-import { useState } from "react";
-import SearchIcon from "@mui/icons-material/Search";
-import CloseIcon from "@mui/icons-material/Close";
-import "./styles/FilterDetails.css";
-type FilterDetailsProps = { onClick?: () => void };
+import {useState} from 'react'
+import SearchIcon from '@mui/icons-material/Search'
+import CloseIcon from '@mui/icons-material/Close'
+import './styles/FilterDetails.css'
+type FilterDetailsProps = {onClick?: () => void}
 
 export default function FilterDetails({
-  onClick: onToggleClick,
+  onClick: onToggleClick
 }: FilterDetailsProps) {
-  const [filterShown, setFilterShown] = useState<"location" | "guests">(
-    "location",
-  );
+  const [filterShown, setFilterShown] = useState<'location' | 'guests'>(
+    'location'
+  )
 
   return (
     <div className="filterDetails">
@@ -33,23 +33,21 @@ export default function FilterDetails({
               <p>Contact</p>
             </div>
           </div>
-          <div className="filterItemButton fullHeight">
-            <button className="bigSearchButton">
-              <SearchIcon style={{ paddingRight: "5px" }} />
-              Search
-            </button>
-          </div>
-          <div className="filterItemButton fullHeight">
-            <button
-              className="bigSearchButton closeButton"
-              onClick={onToggleClick}
-            >
-              <CloseIcon style={{ paddingRight: "5px" }} />
-              Close
-            </button>
-          </div>
         </div>
+
+        <button className="bigSearchButton primaryButton">
+          <SearchIcon style={{paddingRight: '5px'}} />
+          Search
+        </button>
+
+        <button
+          className="bigSearchButton secondaryButton"
+          onClick={onToggleClick}
+        >
+          <CloseIcon style={{paddingRight: '5px'}} />
+          Close
+        </button>
       </div>
     </div>
-  );
+  )
 }

@@ -1,19 +1,22 @@
-import {createSlice } from "@reduxjs/toolkit";
+import {createSlice} from '@reduxjs/toolkit'
 
 export const filterSlice = createSlice({
-  name: "filter",
+  name: 'filter',
   initialState: {
-    location: "",
+    location: '',
     numberOfGuests: 0,
-    showFilterDetails: false,
+    showFilterDetails: false
   },
   reducers: {
-    toggleShowFilterDetails: (state) => {state.showFilterDetails = !state.showFilterDetails},
-  },
-});
+    toggleShowFilterDetails: (state) => {
+      state.showFilterDetails = !state.showFilterDetails
+    }
+  }
+})
 
-export const selectShowFilterDetails = (state: any) => state.filter.showFilterDetails;
+export const selectShowFilterDetails = (state: any) =>
+  state.filter.showFilterDetails
 
-export const {toggleShowFilterDetails} = filterSlice.actions;
+export const {toggleShowFilterDetails} = filterSlice.actions
 
-export default filterSlice.reducer;
+export default filterSlice.reducer
