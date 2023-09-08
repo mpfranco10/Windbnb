@@ -1,74 +1,74 @@
 .staysGrid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .stays {
-  width: 70%;
+	width: 70%;
 }
 
 .staysTitle {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 29px;
-  letter-spacing: 0em;
-  text-align: left;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 29px;
+	letter-spacing: 0em;
+	text-align: left;
 }
 
 #stayHeader {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .loaderContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 70vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 70vh;
 }
 
 .loader {
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #f05454;
-  width: 100px;
-  height: 100px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 2s linear infinite;
+	border: 16px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid #f05454;
+	width: 100px;
+	height: 100px;
+	-webkit-animation: spin 2s linear infinite; /* Safari */
+	animation: spin 2s linear infinite;
 }
 
 /* Safari */
 @-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 @media (min-width: 1300px) {
-  .staysGrid {
-    display: grid;
-    grid-auto-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-  }
+	.staysGrid {
+		display: grid;
+		grid-auto-rows: 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 20px;
+	}
 }
 
 @media (max-width: 672px) {
-  .stays {
-    width: 90%;
-  }
+	.stays {
+		width: 90%;
+	}
 }
